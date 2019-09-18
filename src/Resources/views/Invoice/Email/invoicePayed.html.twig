@@ -1,0 +1,13 @@
+{% block subject %}
+    THank you! Invoice payed.
+{% endblock %}
+
+<br/><br/>
+
+{% block body %}
+    {% autoescape %}
+        Invoice with id {{ invoice.id }} was payed for order with number #{{ invoice.orderNumber }}.
+        <br/><br/>
+        You can find a copy of the payed invoice in this email's attachments.
+    {% endautoescape %}
+{% endblock %}

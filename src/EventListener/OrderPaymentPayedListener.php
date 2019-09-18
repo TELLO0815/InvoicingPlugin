@@ -8,7 +8,7 @@ use Sylius\InvoicingPlugin\Command\SendInvoiceEmail;
 use Sylius\InvoicingPlugin\Event\OrderPaymentPaid;
 use Symfony\Component\Messenger\MessageBusInterface;
 
-final class OrderPaymentPaidListener
+final class OrderPaymentPayedListener
 {
     /** @var MessageBusInterface */
     private $commandBus;

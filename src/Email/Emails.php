@@ -6,7 +6,7 @@ namespace Sylius\InvoicingPlugin\Email;
 
 final class Emails
 {
-    public const INVOICE_GENERATED = 'invoice_generated';
+    public const INVOICE_PAYED = 'invoice_payed';
 
     private function __construct()
     {
