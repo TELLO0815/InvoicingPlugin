@@ -9,7 +9,7 @@ use Sylius\InvoicingPlugin\Entity\InvoiceInterface;
 use Sylius\InvoicingPlugin\Filesystem\TemporaryFilesystem;
 use Sylius\InvoicingPlugin\Generator\InvoicePdfFileGeneratorInterface;
 
-final class InvoicePayedEmailSender implements InvoicePayedEmailSenderInterface
+final class InvoicePaymentReceivedEmailSender implements InvoicePaymentReceivedEmailSenderInterface
 {
     /** @var SenderInterface */
     private $emailSender;
@@ -42,7 +42,7 @@ final class InvoicePayedEmailSender implements InvoicePayedEmailSenderInterface
             $pdfInvoice->filename(),
             $pdfInvoice->content(),
             function (string $filepath) use ($invoice, $customerEmail): void {
-                $this->emailSender->send(Emails::INVOICE_PAYED, [$customerEmail], ['invoice' => $invoice], [$filepath]);
+                $this->emailSender->send(Emails::INVOICE_PAYMENT_RECEIVED, [$customerEmail], ['invoice' => $invoice], [$filepath]);
             }
         );
     }

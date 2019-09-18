@@ -6,8 +6,8 @@ sylius_mailer:
         invoice_generated:
             subject: sylius.emails.invoice_generated.subject
             template: "@SyliusInvoicingPlugin/Invoice/Email/invoiceGenerated.html.twig"
-        invoice_payed:
-            subject: sylius.emails.invoice_payed.subject
+        invoice_payment_received:
+            subject: sylius.emails.invoice_payment_received.subject
             template: "@SyliusInvoicingPlugin/Invoice/Email/invoicePayed.html.twig"
 
 knp_snappy:

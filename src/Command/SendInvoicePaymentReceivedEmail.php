@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Sylius\InvoicingPlugin\Command;
 
-final class SendInvoicePayedEmail
+final class SendInvoicePaymentReceivedEmail
 {
     /** @var string */
     private $orderNumber;
