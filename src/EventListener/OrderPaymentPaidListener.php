@@ -20,6 +20,6 @@ final class OrderPaymentPaidListener
 
     public function __invoke(OrderPaymentPaid $event): void
     {
-        $this->commandBus->dispatch(new SendInvoiceEmail($event->orderNumber()));
+//        $this->commandBus->dispatch(new SendInvoiceEmail($event->orderNumber()));
     }
 }
